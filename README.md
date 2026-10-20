@@ -23,9 +23,3 @@
 - MariaDB para personas, citas, agenda, historial y auditoría.
 - Keycloak para identidad y permisos por rol.
 - Integración externa de consulta DNI (token gestionado únicamente en servidor).
-
-## Alcance de este repositorio
-
-Este es un **repositorio de revisión académica**: las vistas muestran diagramas y extractos reales de código, pero **no** contienen todo el software ni archivos de despliegue, credenciales o información de pacientes. El código integral se conserva de manera privada.
-
-> GitHub **no permite bloquear la descarga o clonación** a quien tiene acceso de lectura. La vista web no incluye botones propios de descarga, pero sí puede guardarse o copiarse usando el navegador.
