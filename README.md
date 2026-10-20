@@ -2,7 +2,7 @@
 
 **Repositorio de exposición académica:** diagramas, trazabilidad y fragmentos verificables del código de Ceramic Dent D&O. No se incluye el código completo ni datos personales de pacientes.
 
-**Ver exposición visual:** [Sitio de los cinco procesos](docs/index.html) (en GitHub Pages la misma página se publica como sitio).
+**Ver exposición visual:** [Sitio de los cinco procesos](docs/index.html)
 
 **Demostración del sistema:** https://ceramicdent.com/
 
