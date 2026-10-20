@@ -1,0 +1,24 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", pad="0.12", nodesep="0.08", ranksep="0.19", splines=polyline];
+  node [shape=box, style="rounded,filled", fillcolor="#F1F7FA", color="#1D6781", fontname="Arial", fontsize=12, penwidth=1.3, height=0.43, width=5.45, fixedsize=false, margin="0.13,0.06"];
+  edge [color="#217E90", penwidth=1.1, fontname="Arial", fontsize=9, arrowsize=0.65, fontcolor="#2A4B5B"];
+  n0 [label="01. Doctor recibe solicitud del paciente", fillcolor="#EAF1FD"];
+  n1 [label="02. Angular: formulario de cambio", fillcolor="#F1F7FA"];
+  n2 [label="03. POST phone con JWT DOCTOR", fillcolor="#F1F7FA"];
+  n3 [label="04. Business: valida paciente/teléfono", fillcolor="#F1F7FA"];
+  n4 [label="05. Repo: verifica PENDING previa", fillcolor="#F1F7FA"];
+  n5 [label="06. Guarda solicitud PENDING", fillcolor="#F1F7FA"];
+  n6 [label="07. Notifica al administrador", fillcolor="#F1F7FA"];
+  n7 [label="08. Admin revisa en Angular", fillcolor="#F1F7FA"];
+  n8 [label="09. PATCH review con JWT ADMIN", fillcolor="#F1F7FA"];
+  n9 [label="10. APPROVED + tperson actualizado", fillcolor="#E7F3EB"];
+  n0 -> n1 [label=" 1. idPatient, nuevo teléfono y razón "];
+  n1 -> n2 [label=" 2. JSON de solicitud "];
+  n2 -> n3 [label=" 3. token e id paciente "];
+  n3 -> n4 [label=" 4. validaciones de estado y formato "];
+  n4 -> n5 [label=" 5. sin duplicidad "];
+  n5 -> n6 [label=" 6. idRequest + estado "];
+  n6 -> n7 [label=" 7. solicitud para revisar "];
+  n7 -> n8 [label=" 8. approved + observación "];
+  n8 -> n9 [label=" 9. actualización + auditoría "];
+}
