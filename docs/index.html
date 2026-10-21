@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0c1118" />
+  <meta name="theme-color" content="#f9fbfc" />
   <meta name="description" content="Ceramic Dent D&O · Arquitectura de cinco procesos E2E en un explorador tridimensional interactivo." />
   <title>Ceramic Dent · Architecture Studio</title>
   <link rel="stylesheet" href="style.css" />
@@ -46,7 +46,7 @@
       <section class="scene-area" id="sceneArea" aria-label="Arquitectura tridimensional interactiva">
         <canvas id="scene" aria-hidden="true"></canvas>
         <div class="scene-labels" id="sceneLabels"></div>
-        <div class="scene-topline"><span><i class="scene-status-dot"></i> VISTA ESPACIAL EN TIEMPO REAL</span><span id="cameraCaption">PERSPECTIVA · 3D</span></div>
+        <div class="stage-legend" aria-label="Leyenda de componentes"><span><i class="legend-dot legend-actor"></i>Actor</span><span><i class="legend-dot legend-app"></i>Aplicación</span><span><i class="legend-dot legend-service"></i>Servicio</span><span><i class="legend-dot legend-data"></i>Datos</span></div><div class="scene-topline"><span><i class="scene-status-dot"></i> VISTA ESPACIAL EN TIEMPO REAL</span><span id="cameraCaption">PERSPECTIVA · 3D</span></div>
         <div class="scene-quick-info"><span class="mini-eyebrow">FLUJO DE DATOS</span><strong id="flowState">01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10</strong></div>
         <div class="scene-tools">
           <button class="tool-btn" id="btnReset" title="Restablecer cámara">↺ <span>Restablecer</span></button>
@@ -54,7 +54,7 @@
           <button class="tool-btn" id="btnZoomOut" title="Alejar">−</button>
           <button class="tool-btn" id="btnFlat" title="Alternar vista">◈ <span>Vista</span></button>
         </div>
-        <div class="scene-hint" id="sceneHint">ARRASTRA PARA ROTAR <span>·</span> RUEDA PARA ZOOM <span>·</span> SELECCIONA UN BLOQUE</div>
+        <div class="scene-hint" id="sceneHint">ARRASTRA PARA ROTAR <span>·</span> CTRL + RUEDA PARA ZOOM <span>·</span> SELECCIONA UN BLOQUE</div>
       </section>
       <div class="process-bottom">
         <div class="timeline-top"><div><span class="mini-eyebrow">RECORRIDO E2E</span><span class="timeline-counter" id="stepCounter">ETAPA 01 / 10</span></div><div class="step-control"><button id="btnPrev" aria-label="Etapa anterior">←</button><button id="btnPlay" aria-label="Reproducir recorrido">▶ <span>Reproducir</span></button><button id="btnNext" aria-label="Siguiente etapa">→</button></div></div>
@@ -94,6 +94,6 @@
       <div class="code-dialog-footer"><span id="expandedLines"></span><span>Esc para cerrar · Ctrl+C para copiar una selección</span></div>
     </section>
   </div>
-  <div class="modal-backdrop" id="helpModal" hidden><div class="help-modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><button class="close-modal" id="closeHelp" aria-label="Cerrar">×</button><span class="eyebrow">GUÍA RÁPIDA</span><h3 id="helpTitle">Explora la arquitectura</h3><p>Gira el modelo arrastrando el mouse. Acércate con la rueda. Selecciona cualquier bloque o usa la línea de tiempo inferior. El panel derecho muestra la etapa y fragmentos reales del código.</p><div class="help-keys"><kbd>←</kbd><kbd>→</kbd><span>Cambiar de etapa</span></div><button id="gotIt" class="modal-button">Entendido</button></div></div>
+  <div class="modal-backdrop" id="helpModal" hidden><div class="help-modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><button class="close-modal" id="closeHelp" aria-label="Cerrar">×</button><span class="eyebrow">GUÍA RÁPIDA</span><h3 id="helpTitle">Explora la arquitectura</h3><p>Gira el modelo arrastrando el mouse. Acércate con Ctrl + rueda o con los botones + y −. Selecciona cualquier bloque o usa la línea de tiempo inferior. El panel derecho muestra la etapa y fragmentos reales del código.</p><div class="help-keys"><kbd>←</kbd><kbd>→</kbd><span>Cambiar de etapa</span></div><button id="gotIt" class="modal-button">Entendido</button></div></div>
 </body>
 </html>
