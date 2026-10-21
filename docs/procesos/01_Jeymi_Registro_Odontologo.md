@@ -8,7 +8,7 @@
 
 ## Diagrama de arquitectura E2E
 
-![Diagrama Anderson](../diagramas/01_Anderson_Registro_Odontologo.png)
+![Diagrama Jeymi](../diagramas/01_Anderson_Registro_Odontologo.png)
 
 ## Recorrido de extremo a extremo
 
@@ -129,11 +129,3 @@ Estos extractos provienen del código original; para revisar la implementación 
 ## Decisión técnica
 
 Se observan Spring Security por rol, validación de entrada, consulta externa de DNI y coordinación Keycloak–MariaDB. Como alternativa teórica, centralizar identidades y datos clínicos en una sola base simplificaría el alta, pero perdería separación del proveedor de identidad.
-
-## Guion oral de repaso
-
-1. Mi proceso empieza cuando administración debe incorporar un nuevo odontólogo.
-2. En Angular, person-list.ts arma los datos y envía person/insert.
-3. Spring Security comprueba el rol ADMIN; el Controller valida el DTO.
-4. BusinessPerson consulta el DNI, comprueba duplicados, crea la identidad en Keycloak y persiste el doctor en tperson.
-5. Termina con un odontólogo habilitado y evidencias de auditoría; si falla la base se intenta compensar la cuenta externa.
