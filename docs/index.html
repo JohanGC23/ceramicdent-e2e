@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0c1118" />
+  <meta name="description" content="Ceramic Dent D&O · Arquitectura de cinco procesos E2E en un explorador tridimensional interactivo." />
+  <title>Ceramic Dent · Architecture Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Ceramic Dent, inicio">
+      <span class="brand-icon"><svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M14 3.3c-3.1 0-5.1 1.1-6.7 1.1C4.5 4.4 2.9 8.1 4.3 12.7c.7 2.1 1.8 4 2.1 6.6.4 3 1.7 5.5 3.3 5.5 2.1 0 1.4-8.2 4.3-8.2s2.2 8.2 4.3 8.2c1.6 0 2.9-2.5 3.3-5.5.3-2.6 1.4-4.5 2.1-6.6 1.4-4.6-.2-8.3-3.1-8.3-1.6 0-3.6-1.1-6.6-1.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-wordmark"><strong>CERAMIC DENT</strong><small>ARCHITECTURE STUDIO</small></span>
+    </a>
+    <div class="header-middle"><span class="live-dot"></span> ARQUITECTURA DEL SOFTWARE <span class="header-divider">/</span> E2E</div>
+    <a class="site-link" target="_blank" rel="noopener noreferrer" href="https://ceramicdent.com/">Abrir sistema <span>↗</span></a>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Integrantes del grupo">
+      <div class="side-top">
+        <p class="eyebrow">EXAMEN PROCEDIMENTAL</p>
+        <h1>5 procesos.<br><em>Un sistema.</em></h1>
+        <p class="side-sub">Selecciona un integrante para explorar su arquitectura.</p>
+      </div>
+      <div class="nav-label"><span>INTEGRANTES</span><span>05</span></div>
+      <nav class="member-nav" id="memberNav" aria-label="Seleccionar integrante"></nav>
+      <div class="side-bottom">
+        <div class="side-mini-label">TECNOLOGÍAS</div>
+        <div class="tech-pills"><span>Angular</span><span>Spring Boot</span><span>MariaDB</span><span>Keycloak</span></div>
+        <div class="side-school">UNAMBA · INGENIERÍA INFORMÁTICA Y SISTEMAS<br>ARQUITECTURA DEL SOFTWARE · 2026</div>
+      </div>
+    </aside>
+    <main class="main-panel">
+      <div class="process-head">
+        <div class="process-heading">
+          <div class="overline"><span class="overline-num" id="processNumber">01 / 05</span><span class="overline-sep"></span><span id="processOwner">ANDERSON</span></div>
+          <h2 id="processTitle">Registro de odontólogo</h2>
+          <p id="processSubtitle">Del registro a la habilitación en el sistema</p>
+        </div>
+        <div class="head-actions"><span class="count-chip"><b>10</b> etapas E2E</span><button class="icon-button" id="btnInfo" title="Instrucciones" aria-label="Instrucciones">?</button></div>
+      </div>
+      <section class="scene-area" id="sceneArea" aria-label="Arquitectura tridimensional interactiva">
+        <canvas id="scene" aria-hidden="true"></canvas>
+        <div class="scene-labels" id="sceneLabels"></div>
+        <div class="scene-topline"><span><i class="scene-status-dot"></i> VISTA ESPACIAL EN TIEMPO REAL</span><span id="cameraCaption">PERSPECTIVA · 3D</span></div>
+        <div class="scene-quick-info"><span class="mini-eyebrow">FLUJO DE DATOS</span><strong id="flowState">01 → 02 → 03 → 04 → 05 → 06 → 07 → 08 → 09 → 10</strong></div>
+        <div class="scene-tools">
+          <button class="tool-btn" id="btnReset" title="Restablecer cámara">↺ <span>Restablecer</span></button>
+          <button class="tool-btn" id="btnZoomIn" title="Acercar">＋</button>
+          <button class="tool-btn" id="btnZoomOut" title="Alejar">−</button>
+          <button class="tool-btn" id="btnFlat" title="Alternar vista">◈ <span>Vista</span></button>
+        </div>
+        <div class="scene-hint" id="sceneHint">ARRASTRA PARA ROTAR <span>·</span> RUEDA PARA ZOOM <span>·</span> SELECCIONA UN BLOQUE</div>
+      </section>
+      <div class="process-bottom">
+        <div class="timeline-top"><div><span class="mini-eyebrow">RECORRIDO E2E</span><span class="timeline-counter" id="stepCounter">ETAPA 01 / 10</span></div><div class="step-control"><button id="btnPrev" aria-label="Etapa anterior">←</button><button id="btnPlay" aria-label="Reproducir recorrido">▶ <span>Reproducir</span></button><button id="btnNext" aria-label="Siguiente etapa">→</button></div></div>
+        <div class="stepper" id="stepper" aria-label="Etapas del proceso"></div>
+        <div class="process-footer"><span id="startEnd">INICIO → RESULTADO</span><button id="btnShowAll" class="text-button">Mostrar flujo completo <span>↗</span></button></div>
+      </div>
+    </main>
+    <aside class="inspector" aria-label="Detalle de la arquitectura">
+      <div class="inspector-header"><span class="eyebrow">INSPECTOR DEL PROCESO</span><span class="inspector-count" id="panelIndex">01 / 10</span></div>
+      <div class="inspector-hero"><span class="stage-rail">ETAPA SELECCIONADA <span class="rail-square"></span></span><h3 id="detailName">Solicitud</h3><p id="detailDescription">Descripción</p></div>
+      <div class="inspector-section"><p class="eyebrow">DATO TRANSMITIDO</p><div class="data-plate"><span class="data-icon">↗</span><p id="detailData">Datos</p></div></div>
+      <div class="inspector-section"><p class="eyebrow">RESULTADO DEL PROCESO</p><p id="processResult" class="result-text">Resultado</p></div>
+      <div class="inspector-code-title"><p class="eyebrow">CÓDIGO DEL PROYECTO</p><span id="snippetCounter">01 / 03</span></div>
+      <div class="snippet-tabs" id="snippetTabs"></div>
+      <div class="code-file">
+        <span class="file-icon">⌁</span>
+        <span id="snippetFile" class="code-filename">Archivo del código</span>
+        <div class="code-file-actions">
+          <button class="code-tool" id="toggleWrap" title="Cambiar ajuste de línea" aria-label="Cambiar ajuste de línea" aria-pressed="true">↵</button>
+          <button class="code-tool" id="copyCode" title="Copiar código" aria-label="Copiar código">⧉</button>
+          <button class="code-tool" id="expandCode" title="Ampliar código" aria-label="Ampliar código">⤢</button>
+        </div>
+      </div>
+      <pre class="code-preview" id="codePreview"><code id="codeView"></code></pre>
+      <div class="code-caption" id="codeCaption"></div>
+      <div class="inspector-bottom"><p><span class="accent-dot"></span> Referencias tomadas del código del proyecto.</p><span>TECLAS ← → PARA CAMBIAR DE ETAPA</span></div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="code-modal" id="codeModal" hidden>
+    <section class="code-dialog" role="dialog" aria-modal="true" aria-labelledby="expandedTitle">
+      <div class="code-dialog-header">
+        <div class="code-dialog-heading"><span class="eyebrow">VISOR DE CÓDIGO</span><h3 id="expandedTitle">Archivo fuente</h3><p id="expandedPath"></p></div>
+        <div class="code-dialog-actions"><button type="button" class="code-tool" id="expandedWrap" title="Ajustar líneas" aria-label="Ajustar líneas">↵ Ajustar</button><button type="button" class="code-tool" id="expandedCopy" title="Copiar código" aria-label="Copiar código">⧉ Copiar</button><button type="button" class="code-tool" id="closeCode" title="Cerrar visor" aria-label="Cerrar visor">✕</button></div>
+      </div>
+      <pre class="code-preview code-preview-expanded" id="expandedPreview"><code id="expandedCode"></code></pre>
+      <div class="code-dialog-footer"><span id="expandedLines"></span><span>Esc para cerrar · Ctrl+C para copiar una selección</span></div>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="helpModal" hidden><div class="help-modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><button class="close-modal" id="closeHelp" aria-label="Cerrar">×</button><span class="eyebrow">GUÍA RÁPIDA</span><h3 id="helpTitle">Explora la arquitectura</h3><p>Gira el modelo arrastrando el mouse. Acércate con la rueda. Selecciona cualquier bloque o usa la línea de tiempo inferior. El panel derecho muestra la etapa y fragmentos reales del código.</p><div class="help-keys"><kbd>←</kbd><kbd>→</kbd><span>Cambiar de etapa</span></div><button id="gotIt" class="modal-button">Entendido</button></div></div>
+</body>
+</html>
