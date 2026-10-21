@@ -140,11 +140,3 @@ Estos extractos provienen del código original; para revisar la implementación 
 ## Decisión técnica
 
 La asignación se difiere hasta que un doctor toma la solicitud. La fila de la cita se bloquea dentro de una transacción; alternativa hipotética: asignar automáticamente un doctor al solicitar, lo que exigiría otra política de reparto.
-
-## Guion oral de repaso
-
-1. El paciente inicia el proceso con su DNI, servicio y horario.
-2. Angular obtiene los cupos del backend, donde se cruzan las citas y los bloqueos.
-3. Al confirmar la solicitud se inserta una cita PENDING, todavía sin doctor, y se notifican los participantes.
-4. Un doctor entra al panel y ejecuta claim sobre la solicitud pendiente; la fila se bloquea para evitar que dos doctores la tomen.
-5. El resultado es CONFIRMED, con doctor asignado e historial programado.
