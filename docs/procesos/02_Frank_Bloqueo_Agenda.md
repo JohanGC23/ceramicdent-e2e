@@ -124,11 +124,3 @@ Estos extractos provienen del código original; para revisar la implementación 
 ## Decisión técnica
 
 Los turnos libres se calculan a partir de citas y bloqueos, en lugar de persistir todos los intervalos libres. Alternativa hipotética: guardar cada turno libre como una fila, lo que añadiría sincronización y riesgo de estados obsoletos.
-
-## Guion oral de repaso
-
-1. Mi evento de negocio es la ausencia temporal del doctor.
-2. En Angular capturo fecha/hora inicial, final y motivo, y llamo al endpoint availability/insert.
-3. El backend valida el rango, la identidad del doctor y dos tipos de conflicto: bloqueos ya existentes y citas en curso o confirmadas.
-4. Cuando no hay conflicto, guarda un BLOCKED en tavailability.
-5. BusinessAppointment lee esos bloqueos al calcular horarios; el resultado medible es que ese intervalo deja de ofrecerse como disponible.
