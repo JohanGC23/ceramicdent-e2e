@@ -8,7 +8,7 @@
 
 ## Diagrama de arquitectura E2E
 
-![Diagrama Jeymi](../diagramas/04_Jeymi_Atencion_Clinica.png)
+![Diagrama Anderson](../diagramas/04_Anderson_Atencion_Clinica.png)
 
 ## Recorrido de extremo a extremo
 
@@ -158,11 +158,3 @@ Estos extractos provienen del código original; para revisar la implementación 
 ## Decisión técnica
 
 La atención termina con una operación transaccional que sincroniza cita e historial, en vez de exigir que el usuario actualice cada tabla por separado. La alternativa hipotética de llamadas independientes expondría estados clínicos inconsistentes.
-
-## Guion oral de repaso
-
-1. Mi proceso inicia con una cita confirmada, cuando el doctor cambia el estado a IN_PROGRESS.
-2. El backend verifica que el doctor esté autorizado y que la hora permita comenzar.
-3. Cuando termina el procedimiento, Angular envía diagnóstico, tratamiento y recomendaciones a appointment/finalize.
-4. BusinessAppointment exige estado IN_PROGRESS; luego actualiza tappointment, tmedicalhistory y trecommendation dentro de una transacción.
-5. El resultado medible es una atención COMPLETED con historial ATTENDED y trazabilidad de auditoría.
