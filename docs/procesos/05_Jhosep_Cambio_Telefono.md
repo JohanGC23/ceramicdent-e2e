@@ -142,11 +142,3 @@ Estos extractos provienen del código original; para revisar la implementación 
 ## Decisión técnica
 
 La modificación requiere dos roles y una aprobación explícita; alternativa hipotética: que el doctor edite directamente tperson, más simple pero sin segregación de funciones.
-
-## Guion oral de repaso
-
-1. El paciente comunica al doctor que necesita cambiar su teléfono.
-2. El doctor crea una solicitud; el backend comprueba el rol DOCTOR, la información del paciente y la ausencia de otra solicitud pendiente.
-3. Se guarda una fila PENDING en tpatientdatachangerequest y el administrador recibe una notificación.
-4. El ADMIN abre la lista, decide y llama al endpoint de revisión; la base bloquea la solicitud para que no se revise dos veces.
-5. Si aprueba, se actualiza tperson, se marca APPROVED y se genera auditoría. Si rechaza, el teléfono permanece igual.
