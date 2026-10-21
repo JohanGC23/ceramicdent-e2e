@@ -8,7 +8,7 @@
 
 ## Diagrama de arquitectura E2E
 
-![Diagrama Jeymi](../diagramas/01_Anderson_Registro_Odontologo.png)
+![Diagrama Jeymi](../diagramas/01_Jeymi_Registro_Odontologo.png)
 
 ## Recorrido de extremo a extremo
 
